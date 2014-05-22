@@ -47,7 +47,7 @@ set background=light
 colorscheme solarized
 
 " Set guifont
-set guifont=Source_Code_Pro_Semibold:h13
+set guifont=Source_Code_Pro_Semibold:h12
 set guitablabel=%N\ %t\ %M
 
 " Only do this part when compiled with support for autocommands
@@ -67,9 +67,6 @@ nmap <leader>h :set hlsearch!<CR>
 set listchars=tab:▶\ ,eol:¬
 set showbreak=…
 
-" Bubble single lines
-nmap <C-Up> ddkP
-nmap <C-Down> ddp
-" Bubble multiple lines
-vmap <C-Up> xkP`[V`]
-vmap <C-Down> xp`[V`]
+" Setup scp
+let g:netrw_scp_cmd = 'c:\"Program Files (x86)"\PuTTY\pscp.exe -q'
+let g:netrw_silent = 1
