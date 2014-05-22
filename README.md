@@ -1,7 +1,7 @@
 # Umgebung aufsetzen
 
 - Orginal "vimfiles"-Verzeichnis in "C:\Program Files (x86)\Vim" umbenennen
-oder l�schen.
+oder löschen.
 - Neues Verzeichnis "vimfiles" an beliebiger Stelle erzeugen, z: D:\usr\var\vimfiles
 und \_vimrc-Datei dorthin verschieben.
 
@@ -26,7 +26,7 @@ gitcommit -m "Initial commit"
 
 # Umgebung auf anderem Rechner installieren
 
-Schritte aus "Umgebung aufsetzen" und "Symlinks erstellen" durchf�hren
+Schritte aus "Umgebung aufsetzen" und "Symlinks erstellen" durchführen
 
 ```
 cd D:\usr\var\vimfiles
