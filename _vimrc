@@ -2,6 +2,8 @@ execute pathogen#infect()
 
 set guioptions-=TMrL
 set guioptions=c
+set noerrorbells
+set visualbell
 
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
@@ -47,7 +49,7 @@ set background=light
 colorscheme solarized
 
 " Set guifont
-set guifont=Source_Code_Pro_Semibold:h13
+set guifont=Source_Code_Pro_Semibold:h12
 set guitablabel=%N\ %t\ %M
 
 " Only do this part when compiled with support for autocommands
