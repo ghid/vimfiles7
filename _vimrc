@@ -68,3 +68,7 @@ nmap <leader>h :set hlsearch!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▶\ ,eol:¬
 set showbreak=…
+
+" Setup scp
+let g:netrw_scp_cmd = 'c:\"Program Files (x86)"\PuTTY\pscp.exe -q'
+let g:netrw_silent = 1
