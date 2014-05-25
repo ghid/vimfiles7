@@ -24,6 +24,14 @@ git add .
 gitcommit -m "Initial commit"
 ```
 
+# Neues Plugin hinzufügen
+
+```
+git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
+git add .
+git commit -m "Install Fugitive.vim bundle as a submodule."
+```
+
 # Umgebung auf anderem Rechner installieren
 
 Schritte aus "Umgebung aufsetzen" und "Symlinks erstellen" durchführen
