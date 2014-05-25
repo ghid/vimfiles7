@@ -65,6 +65,9 @@ endif
 nmap <leader>l :set list!<CR>
 nmap <leader>h :set hlsearch!<CR>
 
+" Key mappings
+nmap <silent> <F8> :TagbarToggle<CR>
+
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▶\ ,eol:¬
 set showbreak=…

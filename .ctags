@@ -1,0 +1,6 @@
+--langdef=autohotkey
+--langmap=autohotkey:.ahk
+--regex-autohotkey=/^[ \t]*#Include[ \t]+(<?\w+>?)/\1/i,include/
+--regex-autohotkey=/^[ \t]*class[ \t]+(\w+)/\1/c,class,classes/
+--regex-autohotkey=/^[ \t]*(\w+:)/\1/l,label/
+--regex-autohotkey=/^[ \t]*([a-zA-Z0-9_#@$]+)\([\w\W\s\S]*\)[ \t]+\{/\1/f,function/
