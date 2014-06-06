@@ -1,7 +1,7 @@
 --langdef=autohotkey
 --langmap=autohotkey:.ahk
---regex-autohotkey=/^\s*([a-zA-Z0-9_#$@]+):/\1/l,label/
---regex-autohotkey=/^\s*class\s+([a-zA-Z0-9_#$@]+)/\1/c,class/
---regex-autohotkey=/^\s*([a-zA-Z0-9_#$@]+)\(.*\)\s+\{/\1/f,function/
---regex-autohotkey=/^\s*#[Ii]nclude\s+(<?.+?>?)/\1/i,include/
-
+--regex-autohotkey=/^\s*([a-z0-9_#$@]+):/\1/l,label/i/
+--regex-autohotkey=/^\s*class\s+([a-z0-9_#$@]+)/\1/c,class/i/
+--regex-autohotkey=/^\s*([a-z0-9_#$@]+)\([[:print:]]*?\)\s+\{/\1/f,function/i/
+--regex-autohotkey=/^\s*#Include\s+(<?.+?>?)/\1/i,include/i/
+--regex-autohotkey=/^\s*([#!^+&<>*~$]*[a-z0-9]+( UP)?)::/\1/h,hotkey/i/
