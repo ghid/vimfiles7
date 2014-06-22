@@ -4,6 +4,7 @@
          \ 'c:classes',
          \ 'm:methods',
          \ 'f:functions',
+         \ 'h:hotkeys',
          \ 'l:label',
          \ 'v:variables',
          \ 'i:includes'

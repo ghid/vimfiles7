@@ -67,6 +67,7 @@ if has("autocmd")
 
   " Syntax of these languages is fussy over tabs Vs spaces
   autocmd FileType autohotkey setlocal ts=4 sts=4 sw=4 noexpandtab autoindent number
+  autocmd FileType python setlocal ts=4 sts=4 sw=4 tw=80 smarttab expandtab autoindent number
 endif
 
 " Shortcut to rapidly toggle `set list`
