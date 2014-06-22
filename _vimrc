@@ -44,8 +44,10 @@ function MyDiff()
    endif
 endfunction
 
-" Set default encoding
+" Customize my Vim
 set encoding=utf-8
+set laststatus=2
+set cpoptions+=$
 
 " Setup Solarized colorscheme
 let g:solarized_contrast="high"    "default value is normal
@@ -54,7 +56,8 @@ set background=light
 colorscheme solarized
 
 " Set guifont
-set guifont=Source_Code_Pro_Semibold:h12
+" set guifont=Source_Code_Pro_Semibold:h12
+set guifont=Menlo:h11:cANSI
 set guitablabel=%N\ %t\ %M
 
 " Only do this part when compiled with support for autocommands
