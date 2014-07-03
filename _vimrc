@@ -57,7 +57,7 @@ colorscheme solarized
 
 " Set guifont
 " set guifont=Source_Code_Pro_Semibold:h12
-set guifont=Menlo:h11:cANSI
+set guifont=Menlo:h11:cANSI,Meslo_LG_M:h11:cANSI
 set guitablabel=%N\ %t\ %M
 
 " Only do this part when compiled with support for autocommands
