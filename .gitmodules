@@ -8,3 +8,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = http://github.com/majutsushi/tagbar
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
