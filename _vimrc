@@ -84,3 +84,7 @@ set showbreak=…
 " Setup scp
 let g:netrw_scp_cmd = 'c:\"Program Files (x86)"\PuTTY\pscp.exe -q'
 let g:netrw_silent = 1
+
+" Setup snipMate
+" let g:snippet_dir = $VIM\vimfiles\snippets\,$VIM\vimfiles\bundle\snipmate\snippets\
+let g:snippets_dir = '$VIM\vimfiles\snippets,$VIM\vimfiles\bundle\snipmate\snippets'
