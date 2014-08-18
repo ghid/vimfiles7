@@ -1,0 +1,175 @@
+snippet class "Define a class" b
+/*
+ * Class: $1
+ *     ${2:ToDo:Provide a description}.
+ */
+class $1 {
+
+	$3
+
+}
+endsnippet
+
+snippet method "Define a method" b
+/*
+ * Method: $1
+ *     ${2:ToDo:Provide a description}.
+ */
+$1(${3:Params}) {
+	$4
+}
+endsnippet
+
+snippet function "Define a function" b
+/*
+ * Function: $1
+ *     ${2:ToDo:Provide a description}
+ */
+$1(${3:Params}) {
+	$4
+}
+endsnippet
+
+snippet log "Setup logging for a method or function" b
+${1:_log} := new Logger("${2:class}." A_ThisFunc)
+
+if ($1.Logs(Logger.Input)) {
+	$1.Input("${3:var_name}", $3)
+}
+
+return $1.Exit($4)
+endsnippet
+
+snippet comment "Template for a comment block" b
+ * Parameters:
+ *     ${1:param-name} - ${2:Todo: Provide a description}.
+ *
+ * Remarks:
+ *     ${3:ToDo: Provide remarks if neccessary}.
+ *
+ * Exceptions:
+ *     ${4:ToDo: Comment exceptions}.
+ *
+ * Returns:
+ *     ${5:ToDo: What is returned by a method or function?}.
+ * 
+ * See Also:
+ *     <${6:ToDo: Link to other documentation}>
+ *
+ * Example:
+ *     (start example)
+ *     ${7:ToDo: Provide one or more examples}
+ *     (end)
+ *     ${8:>ToDo: Single line example}
+endsnippet
+
+snippet logif "Log for a certain log level" b
+if (${1:_log}.Logs(Logger.${2:Finest})) {
+	$1.$2("${3:var_name}", $3)
+}
+endsnippet
+
+snippet dump "Log a single value" b
+${1:_log}.${2:Finest}("${3:var_name}", $3)
+endsnippet
+
+snippet if "if ... statement" b
+if ($1) {
+	$2
+}
+endsnippet
+
+snippet ifelse "if ... else ... statement" b
+if ($1) {
+	$2
+} else {
+	$3
+}
+endsnippet
+
+snippet ifelseif "if ... else if ... else statement" b
+if ($1) {
+	$2
+} else if ($3) {
+	$4
+} else {
+	$5
+}
+endsnippet
+
+snippet loop "loop statement" b
+loop % $1 {
+	$2
+}
+endsnippet
+
+snippet loopvar "loop var statement" b
+loop %$1% {
+	$2
+}
+endsnippet
+
+snippet loopuntil "loop ... until statement" b
+loop {
+	$2
+} until ($1)
+endsnippet
+
+snippet while "while ... statement" b
+while ($1) {
+	$2
+}
+endsnippet
+
+snippet for "for ... statement" b
+for ${1:_key}, ${2:_value} in ${3:list} {
+	$4
+}
+endsnippet
+
+snippet try "try ... catch ... finally ... statement" b
+try {
+	$1
+} catch ${2:_ex} {
+	$3
+} finally {
+	$4
+}
+endsnippet
+
+snippet main "Layout a main program" b
+#NoEnv
+SetBatchLines -1
+
+#Include <logging>
+
+Main:
+	$1
+exitapp
+endsnippet
+
+snippet testcase "Layout a test case" b
+#NoEnv
+SetBatchLines -1
+#Warn All, OutputDebug
+
+#Include <logging>
+#Include <testcase>
+#Include %A_ScriptDir%\..\${1:script_name}.ahk
+
+class ${2:class_name}Test extends TestCase {
+
+	@Test_${3:test_name}() {
+		this.Assert${4:Equals}($5)
+	}
+
+exitapp $2Test.RunTests()
+endsnippet
+
+snippet assert "assert... statement" b
+this.Assert${1:Equals}($2)
+endsnippet
+
+snippet assertex "AssertException statement" b
+this.AssertException(${1:base_obj}, "${2:method}", "${3:opt_message}", "${4:opt_expected_msg_expr}", ${5:opt_param_list})
+endsnippet
