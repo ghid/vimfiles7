@@ -57,7 +57,8 @@ colorscheme solarized
 
 " Set guifont
 " set guifont=Source_Code_Pro_Semibold:h12
-set guifont=Menlo:h11:cANSI,Meslo_LG_M:h11:cANSI
+" set guifont=Menlo:h11:cANSI,Meslo_LG_M:h11:cANSI
+set guifont=Consolas_for_Powerline_FixedD:h13:cANSI:cANSI,Menlo:h11:cANSI,Meslo_LG_M:h11:cANSI
 set guitablabel=%N\ %t\ %M
 
 " Only do this part when compiled with support for autocommands
@@ -78,7 +79,7 @@ nmap <leader>h :set hlsearch!<CR>
 nmap <silent> <F8> :TagbarToggle<CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▶\ ,eol:¬
+set listchars=tab:►\ ,eol:¬
 set showbreak=…
 
 " Setup scp
@@ -88,3 +89,7 @@ let g:netrw_silent = 1
 " Setup snipMate
 " let g:snippet_dir = $VIM\vimfiles\snippets\,$VIM\vimfiles\bundle\snipmate\snippets\
 let g:snippets_dir = '$VIM\vimfiles\snippets,$VIM\vimfiles\bundle\snipmate\snippets'
+
+" Setup Powerline
+let g:Powerline_symbols = 'fancy'
+
