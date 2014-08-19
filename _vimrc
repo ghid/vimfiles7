@@ -86,10 +86,15 @@ set showbreak=…
 let g:netrw_scp_cmd = 'c:\"Program Files (x86)"\PuTTY\pscp.exe -q'
 let g:netrw_silent = 1
 
-" Setup snipMate
-" let g:snippet_dir = $VIM\vimfiles\snippets\,$VIM\vimfiles\bundle\snipmate\snippets\
-let g:snippets_dir = '$VIM\vimfiles\snippets,$VIM\vimfiles\bundle\snipmate\snippets'
-
 " Setup Powerline
 let g:Powerline_symbols = 'fancy'
 
+" Setup Ultisnips
+" Trigger configuration.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+" Set directory for snippets
+let g:UltiSnipsSnippetsDir=$VIM . "/vimfiles/UltiSnips"
