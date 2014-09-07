@@ -48,6 +48,7 @@ endfunction
 set encoding=utf-8
 set laststatus=2
 set cpoptions+=$
+set noshowmode
 
 " Setup Solarized colorscheme
 let g:solarized_contrast="high"    "default value is normal
