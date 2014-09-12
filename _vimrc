@@ -68,8 +68,13 @@ if has("autocmd")
   filetype on
 
   " Syntax of these languages is fussy over tabs Vs spaces
-  autocmd FileType autohotkey setlocal ts=4 sts=4 sw=4 noexpandtab autoindent number
-  autocmd FileType python setlocal ts=4 sts=4 sw=4 tw=80 smarttab expandtab autoindent number
+  autocmd FileType autohotkey 	setlocal ts=4 sts=4 sw=4 noexpandtab autoindent number
+  autocmd FileType python 	setlocal ts=4 sts=4 sw=4 tw=80 smarttab expandtab autoindent number
+  autocmd FileType dosbatch	setlocal ts=4 sts=4 sw=4 noexpandtab autoindent number
+  " Commenting blocks of code
+  autocmd FileType autohotkey	let b:comment_leader = ";"
+  autocmd FileType python 	let b:comment_leader = "#"
+  autocmd FileType dosbatch	let b:comment_leader = "REM"
 endif
 
 " Shortcut to rapidly toggle `set list`
@@ -82,6 +87,17 @@ nmap <silent> <F8> :TagbarToggle<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:►\ ,eol:¬
 set showbreak=…
+
+" Append modeline after last line in buffer.
+" Use substitute() instead of printf() to handle '%%s' modeline in LaTeX
+" files.
+function! AppendModeline()
+  let l:modeline = printf(" vim: ts=%d:sts=%d:sw=%d:tw=%d:%set",
+        \ &tabstop, &softtabstop, &shiftwidth, &textwidth, &expandtab ? '' : 'no')
+  let l:modeline = b:comment_leader . l:modeline
+  call append(line("$"), l:modeline)
+endfunction
+nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
 
 " Setup scp
 let g:netrw_scp_cmd = 'c:\"Program Files (x86)"\PuTTY\pscp.exe -q'
