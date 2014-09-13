@@ -68,7 +68,7 @@ if has("autocmd")
   filetype on
 
   " Syntax of these languages is fussy over tabs Vs spaces
-  autocmd FileType autohotkey setlocal ts=4 sts=4 sw=4 noexpandtab autoindent number
+  autocmd FileType autohotkey setlocal ts=4 sts=4 sw=4 fo+=r noexpandtab autoindent number
   autocmd FileType python setlocal ts=4 sts=4 sw=4 tw=80 smarttab expandtab autoindent number
 endif
 
@@ -82,6 +82,10 @@ nmap <silent> <F8> :TagbarToggle<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:►\ ,eol:¬
 set showbreak=…
+
+" Setup grepprg and grepformat for mack
+set grepprg=mack\ --nogroup\ --column
+set grepformat=%f:%l:%c:%m
 
 " Setup scp
 let g:netrw_scp_cmd = 'c:\"Program Files (x86)"\PuTTY\pscp.exe -q'
