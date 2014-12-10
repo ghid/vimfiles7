@@ -14,3 +14,6 @@
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = http://github.com/SirVer/ultisnips.git
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = https://github.com/godlygeek/tabular.git
