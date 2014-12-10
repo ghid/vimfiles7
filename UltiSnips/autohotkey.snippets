@@ -41,26 +41,27 @@ return $1.Exit($4)
 endsnippet
 
 snippet comment "Template for a comment block" b
- * Parameters:
- *     ${1:param-name} - ${2:Todo: Provide a description}.
- *
- * Remarks:
- *     ${3:ToDo: Provide remarks if neccessary}.
- *
- * Exceptions:
- *     ${4:ToDo: Comment exceptions}.
- *
- * Returns:
- *     ${5:ToDo: What is returned by a method or function?}.
- * 
- * See Also:
- *     <${6:ToDo: Link to other documentation}>
- *
- * Example:
- *     (start example)
- *     ${7:ToDo: Provide one or more examples}
- *     (end)
- *     ${8:>ToDo: Single line example}
+*
+* Parameters:
+*     ${1:param-name} - ${2:Todo: Provide a description}.
+*
+* Remarks:
+*     ${3:ToDo: Provide remarks if neccessary}.
+*
+* Exceptions:
+*     ${4:ToDo: Comment exceptions}.
+*
+* Returns:
+*     ${5:ToDo: What is returned by a method or function?}.
+* 
+* See Also:
+*     <${6:ToDo: Link to other documentation}>
+*
+* Example:
+*     (start example)
+*     ${7:ToDo: Provide one or more examples}
+*     (end)
+*     ${8:>ToDo: Single line example}
 endsnippet
 
 snippet logif "Log for a certain log level" b
@@ -155,13 +156,14 @@ SetBatchLines -1
 
 #Include <logging>
 #Include <testcase>
-#Include %A_ScriptDir%\..\${1:script_name}.ahk
+#Include %A_ScriptDir%\..\\${1:script_name}.ahk
 
 class ${2:class_name}Test extends TestCase {
 
 	@Test_${3:test_name}() {
 		this.Assert${4:Equals}($5)
 	}
+}
 
 exitapp $2Test.RunTests()
 endsnippet
