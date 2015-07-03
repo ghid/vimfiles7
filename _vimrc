@@ -90,7 +90,7 @@ set listchars=tab:►\ ,eol:¬
 set showbreak=…
 
 " Setup grepprg and grepformat for mack
-set grepprg=mack\ --nogroup\ --column\ -k
+set grepprg=mack\ --nogroup\ --column\ -k\ --nocolor\ $*
 set grepformat=%f:%l:%c:%m
 
 " Append modeline after last line in buffer.
