@@ -81,6 +81,8 @@ endif
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
 nmap <leader>h :set hlsearch!<CR>
+" Shortcut to show relative line numbers
+nmap <leader>r :set relativenumber<CR>
 
 " Key mappings
 nmap <silent> <F8> :TagbarToggle<CR>
