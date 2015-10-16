@@ -175,3 +175,19 @@ endsnippet
 snippet assertex "AssertException statement" b
 this.AssertException(${1:base_obj}, "${2:method}", "${3:opt_message}", "${4:opt_expected_msg_expr}", ${5:opt_param_list})
 endsnippet
+
+snippet optimize
+#NoEnv
+#MaxHotkeysPerInterval 99000000
+#HotkeyInterval 99000000
+#KeyHistory 0
+ListLines Off
+Process, Priority, , H ;if unstable, comment or remove this line
+SetBatchLines, -1
+SetKeyDelay, -1, -1
+SetMouseDelay, -1
+SetDefaultMouseSpeed, 0
+SetWinDelay, -1
+SetControlDelay, -1
+SendMode Input
+endsnippet

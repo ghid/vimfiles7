@@ -60,7 +60,8 @@ colorscheme solarized
 " Set guifont
 " set guifont=Source_Code_Pro_Semibold:h12
 " set guifont=Menlo:h11:cANSI,Meslo_LG_M:h11:cANSI
-set guifont=Consolas_for_Powerline_FixedD:h13:cANSI:cANSI,Menlo:h11:cANSI,Meslo_LG_M:h11:cANSI
+" set guifont=Consolas_for_Powerline_FixedD:h13:cANSI:cANSI,Menlo:h11:cANSI,Meslo_LG_M:h11:cANSI
+set guifont=PragmataPro_for_Powerline:h13:cANSI:cANSI,Menlo:h11:cANSI,Meslo_LG_M:h11:cANSI
 set guitablabel=%N\ %t\ %M
 
 " Only do this part when compiled with support for autocommands
@@ -112,6 +113,13 @@ let g:netrw_silent = 1
 
 " Setup Powerline
 let g:Powerline_symbols = 'fancy'
+let g:Powerline_dividers_override = ['', '', '', '']
+let g:Powerline_symbols_override= {
+    \ 'BRANCH': [0xE0A0],
+    \ 'LINE': [0xE0A1],
+    \ 'RO': [0xE0A2],
+    \ }
+" let g:Powerline_colorscheme = 'solarized256'
 
 " Setup Ultisnips
 " Trigger configuration.
@@ -122,3 +130,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 " Set directory for snippets
 let g:UltiSnipsSnippetsDir=$VIM . "/vimfiles/UltiSnips"
+
+" Add syntax highlighting for WebSphere logs
+nmap log :set syn=log<cr>
+
