@@ -1,0 +1,7 @@
+snippet delay "Insert expansion delay"
+set test_expansion_delay=pass
+if !test_expansion_delay! NEQ pass (set test_expansion_delay=& start /B /WAIT cmd.exe /V:ON /C "%0" %* & goto:eof)
+set test_expansion_delay=
+for /f "delims=#" %%a in ('"prompt #$H# &echo on &for %%b in (1) do rem"') do set "nbsp=%%a"
+endsnippet
+
